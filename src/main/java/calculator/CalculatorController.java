@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.ui.ModelMap;
 
 @Controller
-@RequestMapping("/hello")
 public class CalculatorController{
  
-   @RequestMapping(method = RequestMethod.GET)
-   public String printHello(ModelMap model) {
-      //model.addAttribute("message", "Hello Spring MVC Framework!");
-
+	@RequestMapping(value = "/calculator", method = RequestMethod.GET)
+	public String displayCalculator(ModelMap model) {
       return "calculatorUI";
    }
-
+	
+	@RequestMapping(value = "/getResults", method = RequestMethod.POST)
+	public String getResults(ModelMap model) {
+      return "calculatorUI";
+   }
 }
