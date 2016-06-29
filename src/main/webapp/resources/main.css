@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+.errorResponse {
+	color: red;
+	padding: 1em;
+	marigin: 1em;
+}

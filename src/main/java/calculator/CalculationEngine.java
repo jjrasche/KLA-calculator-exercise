@@ -19,7 +19,7 @@ public class CalculationEngine {
 
 	// for case where someone tries to hijack API to run script
 	protected static void ValidateInput(String calcStr) throws FormatException {
-		if (!calcStr.matches("[\\s0-9+-.]+")) {
+		if (!calcStr.matches("[\\s0-9+-/*.()]+")) {
 			throw new FormatException(calcStr);
 		}
 	}
